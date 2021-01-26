@@ -2,23 +2,23 @@ package sonda;
 
 public class Navegador {
 
-    private Ponto limiteSuperior;
-    private Ponto coordenada;
+    private Coordenada limiteSuperior;
+    private Coordenada coordenada;
     private Direcao direcao;
 
-    public Ponto getLimiteSuperior() {
+    public Coordenada getLimiteSuperior() {
         return limiteSuperior;
     }
 
-    public void setLimiteSuperior(Ponto limiteSuperior) {
+    public void setLimiteSuperior(Coordenada limiteSuperior) {
         this.limiteSuperior = limiteSuperior;
     }
 
-    public Ponto getCoordenada() {
+    public Coordenada getCoordenada() {
         return coordenada;
     }
 
-    public void setCoordenada(Ponto coordenada) {
+    public void setCoordenada(Coordenada coordenada) {
         this.coordenada = coordenada;
     }
 

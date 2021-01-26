@@ -12,14 +12,14 @@ public final class Antena {
         this.mensagem = mensagem;
     }
 
-    public Ponto decodificaPontoLimite() {
+    public Coordenada decodificaPontoLimite() {
         String[] pontos = mensagem.getInformacaoLimiteSuperiorDireito().split(" ");
-        return new Ponto(Integer.parseInt(pontos[0]), Integer.parseInt(pontos[1]));
+        return new Coordenada(Integer.parseInt(pontos[0]), Integer.parseInt(pontos[1]));
     }
 
-    public Ponto decodificaPosicaoInicialSonda() {
+    public Coordenada decodificaPosicaoInicialSonda() {
         String[] informacao = mensagem.getInformacaoPosicaoInicial().split(" ");
-        return new Ponto(Integer.parseInt(informacao[0]), Integer.parseInt(informacao[1]));
+        return new Coordenada(Integer.parseInt(informacao[0]), Integer.parseInt(informacao[1]));
     }
 
     public Direcao decodificaDirecaoInicialSonda() {

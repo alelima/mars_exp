@@ -1,11 +1,11 @@
 package sonda;
 
 // Value Object
-public class Ponto {
+public class Coordenada {
     public int x;
     public int y;
 
-    public Ponto(int x, int y) {
+    public Coordenada(int x, int y) {
         this.x = x;
         this.y = y;
     }
