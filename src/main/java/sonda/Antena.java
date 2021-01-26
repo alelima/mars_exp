@@ -17,10 +17,14 @@ public final class Antena {
         return new Ponto(Integer.parseInt(pontos[0]), Integer.parseInt(pontos[1]));
     }
 
-    public CoodenadaCompleta decodificaPosicaoInicialSonda() {
+    public Ponto decodificaPosicaoInicialSonda() {
         String[] informacao = mensagem.getInformacaoPosicaoInicial().split(" ");
-        Ponto pontoInicial = new Ponto(Integer.parseInt(informacao[0]), Integer.parseInt(informacao[1]));
-        return new CoodenadaCompleta(pontoInicial, Direcao.valueOf(informacao[2]));
+        return new Ponto(Integer.parseInt(informacao[0]), Integer.parseInt(informacao[1]));
+    }
+
+    public Direcao decodificaDirecaoInicialSonda() {
+        String[] informacao = mensagem.getInformacaoPosicaoInicial().split(" ");
+        return Direcao.valueOf(informacao[2]);
     }
 
     public ArrayList<Instrucao> decodificaInstrucoes() {

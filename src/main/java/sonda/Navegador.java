@@ -30,11 +30,6 @@ public class Navegador {
         this.direcao = direcao;
     }
 
-    public void setCoordenadaCompleta(CoodenadaCompleta coordenadaCompleta) {
-        this.coordenada = coordenadaCompleta.getCoordenada();
-        this.direcao = coordenadaCompleta.getDirecao();
-    }
-
     public void girarParaEsquerda() {
         direcao = direcao.aEsquerda();
     }

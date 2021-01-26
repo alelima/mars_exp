@@ -17,7 +17,8 @@ public class Sonda {
     public void recebe(Mensagem mensagem) {
         antena.recebe(mensagem);
         navegador.setLimiteSuperior(antena.decodificaPontoLimite());
-        navegador.setCoordenadaCompleta(antena.decodificaPosicaoInicialSonda());
+        navegador.setCoordenada(antena.decodificaPosicaoInicialSonda());
+        navegador.setDirecao(antena.decodificaDirecaoInicialSonda());
         sistemaControlador.setInstrucoes(antena.decodificaInstrucoes());
         sistemaControlador.executaInstrucoes(navegador);
     }
